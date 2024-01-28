@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Progress Notes</string>
+    <string name="add_day">Add Day</string>
+    <string name="workout_tv_hint">Type of Workout</string>
+    <string name="date">Date</string>
+    <string name="save_button_text">Save</string>
+    <string name="cancel_button_text">Cancel</string>
+    <string name="calender_button_text">Change Date</string>
+    <string name="update_calender_button_text">Update Date</string>
+    <string name="search_button_text">Search</string>
+    <string name="menu_button_text">Open Menu</string>
+    <string name="day_example">FRIDAY</string>
+    <string name="date_Example">31-JUL-2001</string>
+    <string name="workout_example">PUSH DAY</string>
+    <string name="back_button_text">Back</string>
+    <string name="add_step">Add Step</string>
+    <string name="update_text">Update</string>
+
+    <string name="delete_button_text">Delete</string>
+    <string name="logout_text">Logout</string>
+    <string name="exercise_delete_confirmation_text">This Exercise Will Be Permanently Deleted</string>
+    <string name="workout_delete_confirmation_text">This Workout Will Be Permanently Deleted</string>
+
+    <string name="exercise_name_hint">Name of Exercise</string>
+    <string name="sets_hint">sets</string>
+    <string name="reps_hint">reps</string>
+    <string name="weights_hint">weights</string>
+    <string name="kg_text">KG</string>
+
+    <string name="login_text">LOGIN</string>
+    <string name="sign_up_text">SIGN UP</string>
+    <string name="email_text">Email</string>
+    <string name="password_text">Password</string>
+    <string name="password_check_text">Confirm Password</string>
+    <string name="sign_up_intent_text">Don\'t have a account\nSIGN UP</string>
+    <string name="login_intent_text">Already have a account\nLOGIN</string>
+    <string name="name_text">Name</string>
+</resources>

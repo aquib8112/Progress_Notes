@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "728794648453",
+    "project_id": "progress-notes-1",
+    "storage_bucket": "progress-notes-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728794648453:android:3a9642b2294d5cce0dfeec",
+        "android_client_info": {
+          "package_name": "com.example.progressnotes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9il22Ncg6V1tn20oRZ_1V4_VwC3pyZRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

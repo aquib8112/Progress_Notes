@@ -1,0 +1,99 @@
+<resources>
+    <style name="Base.Theme.ProgressNotes" parent="Theme.Material3.DayNight.NoActionBar">
+         <item name="colorPrimary">@color/dark_mode_base</item>
+    </style>
+
+    <style name="bar_addBT_style">
+        <item name="android:background">@color/dark_mode_base</item>
+        <item name="android:backgroundTint">@color/dark_mode_base</item>
+    </style>
+
+    <style name="sets_reps_weights_box">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+    </style>
+
+    <style name="open_menu_bt_style"><item name="android:backgroundTint">#1c1b1f</item></style>
+    <style name="recycler_item"><item name="android:backgroundTint">@color/dark_mode_items</item></style>
+
+    <style name="login_signup_box">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:background">@drawable/et_box</item>
+        <item name="android:layout_marginHorizontal">32dp</item>
+        <item name="layout_constraintDimensionRatio">75:12</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="app_title_style">
+        <item name="android:textSize">24sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:text">@string/app_name</item>
+        <item name="android:paddingHorizontal">24dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/dark_mode_base</item>
+        <item name="android:fontFamily">@font/lexend_medium</item>
+        <item name="android:background">@drawable/login_signup_box</item>
+    </style>
+
+    <style name="ET_box">
+        <item name="android:textSize">18sp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:paddingHorizontal">8dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:background">@drawable/et_box</item>
+        <item name="android:layout_marginHorizontal">16dp</item>
+        <item name="layout_constraintDimensionRatio">55:8</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="login_signup_bt">
+        <item name="android:textSize">24sp</item>
+        <item name="fontFamily">@font/lexend_medium</item>
+        <item name="android:paddingHorizontal">32dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/dark_mode_base</item>
+        <item name="android:background">@drawable/dark_bt_box</item>
+        <item name="android:fontFamily">@font/lexend_medium</item>
+    </style>
+
+    <style name="Add_update_exercise_card">
+        <item name="cardCornerRadius">8dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="layout_constraintVertical_bias">.4</item>
+        <item name="layout_constraintDimensionRatio">5:3</item>
+        <item name="android:layout_marginHorizontal">24dp</item>
+        <item name="android:backgroundTint">@color/dark_mode_items</item>
+    </style>
+
+    <style name="Add_update_workout_card">
+        <item name="cardCornerRadius">8dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="layout_constraintVertical_bias">.4</item>
+        <item name="layout_constraintDimensionRatio">5:3</item>
+        <item name="android:layout_marginHorizontal">24dp</item>
+        <item name="android:backgroundTint">@color/dark_mode_items</item>
+    </style>
+
+    <style name="delete_card">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">24dp</item>
+        <item name="android:backgroundTint">@color/dark_mode_black</item>
+    </style>
+</resources>

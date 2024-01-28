@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ExerciseActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        style="@style/bar_addBT_style"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="start|center_vertical"
+            style="@style/bar_addBT_style"
+            android:contentDescription="@string/back_button_text"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/toolbar_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexend_medium"
+            android:text="PUSH DAY"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".025"
+            app:layout_constraintVertical_bias=".45"
+            app:layout_constraintStart_toEndOf="@+id/back_button"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/exercise_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:listitem="@layout/exercise_item" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_steps_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        style="@style/bar_addBT_style"
+        android:contentDescription="@string/add_step"
+        android:src="@drawable/add_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".985" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/add_exercise_card"
+        style="@style/Add_update_exercise_card"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/exercise_Name_ET"
+                style="@style/ET_box"
+                android:layout_marginTop="24dp"
+                android:hint="@string/exercise_name_hint"
+                android:importantForAutofill="no"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/weights_ET"
+                style="@style/sets_reps_weights_box"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/et_box"
+                android:gravity="center"
+                android:hint="@string/weights_hint"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="8dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/reps_ET"
+                app:layout_constraintTop_toBottomOf="@+id/exercise_Name_ET" />
+
+
+            <EditText
+                android:id="@+id/reps_ET"
+                style="@style/sets_reps_weights_box"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/et_box"
+                android:hint="@string/reps_hint"
+                android:gravity="center"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingHorizontal="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/weights_ET"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/sets_ET"
+                app:layout_constraintTop_toBottomOf="@+id/exercise_Name_ET" />
+
+            <EditText
+                android:id="@+id/sets_ET"
+                style="@style/sets_reps_weights_box"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/et_box"
+                android:gravity="center"
+                android:hint="@string/sets_hint"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:paddingHorizontal="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/reps_ET"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exercise_Name_ET" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_button"
+                style="@style/Button_style"
+                android:layout_marginEnd="16dp"
+                android:text="@string/save_button_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weights_ET"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_button"
+                style="@style/Button_style"
+                android:layout_marginEnd="8dp"
+                android:text="@string/cancel_button_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/save_button"
+                app:layout_constraintTop_toBottomOf="@+id/weights_ET" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/update_exercise_card"
+        style="@style/Add_update_exercise_card"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_exercise_Name_ET"
+                style="@style/ET_box"
+                android:layout_marginTop="24dp"
+                android:hint="@string/exercise_name_hint"
+                android:importantForAutofill="no"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/update_sets_ET"
+                style="@style/sets_reps_weights_box"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/et_box"
+                android:gravity="center"
+                android:hint="@string/sets_hint"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:paddingHorizontal="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/update_reps_ET"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/update_exercise_Name_ET" />
+
+            <EditText
+                android:id="@+id/update_reps_ET"
+                style="@style/sets_reps_weights_box"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/et_box"
+                android:gravity="center"
+                android:hint="@string/reps_hint"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingHorizontal="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/update_weights_ET"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/update_sets_ET"
+                app:layout_constraintTop_toBottomOf="@+id/update_exercise_Name_ET" />
+
+            <EditText
+                android:id="@+id/update_weights_ET"
+                style="@style/sets_reps_weights_box"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/et_box"
+                android:gravity="center"
+                android:hint="@string/weights_hint"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/update_reps_ET"
+                app:layout_constraintTop_toBottomOf="@+id/update_exercise_Name_ET" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/update_button"
+                style="@style/Button_style"
+                android:layout_marginEnd="16dp"
+                android:text="@string/update_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/update_weights_ET" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_update_button"
+                style="@style/Button_style"
+                android:layout_marginEnd="8dp"
+                android:text="@string/cancel_button_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/update_button"
+                app:layout_constraintTop_toBottomOf="@+id/update_weights_ET" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/exercise_delete_confirmation_card"
+        style="@style/delete_card"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_medium"
+                android:text="@string/exercise_delete_confirmation_text"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias=".35" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/exercise_delete_confirm_button"
+                style="@style/Button_style"
+                android:layout_marginEnd="16dp"
+                android:text="@string/delete_button_text"
+                app:backgroundTint="@color/error_red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_exercise_delete_button"
+                style="@style/Button_style"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/lexend_medium"
+                android:text="@string/cancel_button_text"
+                app:backgroundTint="#4A4A4A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/exercise_delete_confirm_button"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
