@@ -18,12 +18,26 @@ Progress Notes leverages cutting-edge technologies to deliver a robust and user-
 - Cloud Firestore: Enabling data synchronization across devices, fostering a connected user experience.
 - MVVM Architecture: A thoughtfully designed architectural approach, enhancing code organization and maintainability 🏛️.
 
-## ➡️ How to Use Progress Notes 
-- Using Progress Notes is as straightforward as your workout routine:
-- User Registration: Inmates register and log in via Google to access the app's features.
-- Receptionist Access: A unique login for receptionists streamlines issue resolution.
-- Issue Reporting: Users can report exercise-related issues by adding a photo, description, and location details.
-- Real-Time Notifications: Receptionists receive instant notifications, expediting issue resolution.
-- Issue Status Updates: The app keeps users informed about the status of reported issues, ensuring transparency.
-- Progress Notes transforms exercise documentation into a seamless and empowering experience, aligning technology with fitness goals.
-
+## ➡️ How to Use Progress Notes
+### Getting Started
+### Step 1: Clone the Repository
+- Start by cloning the Progress Notes repository to your local machine.
+```bash
+git clone https://github.com/aquib8112/Progress_Notes.git
+```
+### Step 2: Open in Android Studio
+- Open the cloned project in Android Studio.
+- Ensure your Android Studio is configured correctly for Kotlin, XML, and Firebase.
+### Step 3: Set Up Firebase
+- Connect your project to Firebase:
+- Create a new project on the Firebase Console.
+- Follow the steps to add your Android app to the Firebase project.
+- Download the google-services.json file and place it in your app module.
+### Step 4: Run the App
+- Run the app on your Android device or emulator.
+### Step 5: Sign Up
+- Launch the app and sign up using your Email,then verify your Email.
+- Then Login in the app using the same email and password.
+### Step 6: Use Just Do It
+- Once signed up, start using Progress Notes to record your exercise details and break new records.
+#### Note: Ensure you have the necessary dependencies installed, and your Firebase project is properly set up to use Firebase Authentication and Cloud Firestore.
