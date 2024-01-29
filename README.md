@@ -38,6 +38,6 @@ git clone https://github.com/aquib8112/Progress_Notes.git
 ### Step 5: Sign Up
 - Launch the app and sign up using your Email,then verify your Email.
 - Then Login in the app using the same email and password.
-### Step 6: Use Just Do It
+### Step 6: Use Progress Notes
 - Once signed up, start using Progress Notes to record your exercise details and break new records.
 #### Note: Ensure you have the necessary dependencies installed, and your Firebase project is properly set up to use Firebase Authentication and Cloud Firestore.
